@@ -11,7 +11,6 @@ class Config{
     const spotify_token = "";
     const last_fm_key = "";
 
-
     const table_update_albums = "albums";
     const table_update_artists = "artists";
     const table_update_related = "artists_related";

@@ -112,13 +112,13 @@ class Controller{
             // TODO: Fallback Spotify Artists
 
             // Genres (Electronic,Pop etc.)
-            $result = $db->ObjectBuilder()->rawQuery("SELECT n.name FROM " . Config::table_artists_genre . " as s INNER JOIN " . Config::table_genres . " as n ON s.genre_id = n.id WHERE s.artist_id = '$artist_id' AND type = '0' AND percentage >= '0.5'");
+            //$result = $db->ObjectBuilder()->rawQuery("SELECT n.name FROM " . Config::table_artists_genre . " as s INNER JOIN " . Config::table_genres . " as n ON s.genre_id = n.id WHERE s.artist_id = '$artist_id' AND type = '0' AND percentage >= '0.5'");
 
             $returnArr["genres"] = [];
 
-            foreach( $result as $row ){
-                $returnArr["genres"][] = ["name" => $row->name];
-            }
+            //foreach( $result as $row ){
+            //    $returnArr["genres"][] = ["name" => $row->name];
+            //}
 
             $cached = json_encode($returnArr);
             $memcached->set("getArtistDetails_" . strval($artist_id), $cached, time() + 1800);
