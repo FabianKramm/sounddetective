@@ -6,11 +6,6 @@ containers:
       cmd: apache2-foreground
       workDir: ''
       entryPoint: docker-php-entrypoint
-    env:
-      mysqlPassword:
-        isPrivate: true
-      spotifyToken:
-        isPrivate: true
     persistentFolders:
       - name: folder-0
         localSubPath: ./

@@ -17,7 +17,7 @@ $classLoader->addNamespace('SoundDetective', '../../app');
 
 use SoundDetective\Util\Log;
 
-//$crawler = new SpotifyUpdateCrawler();
+$crawler = new SpotifyUpdateCrawler();
 
 //$crawler->updateArtistsLastFMImages();
 //$crawler->updateCharts();
@@ -25,8 +25,8 @@ use SoundDetective\Util\Log;
 //$crawler->discoverFromPlaylists();
 //$crawler->updateTracks();
 
-//$crawler->updateArtistsTopSongs();
-//$crawler->updateRelatedArtists();
+//$crawler->updateArtistsTopSongs(false);
+$crawler->updateRelatedArtists(false);
 
 
 //$crawler->resetArtistRelatedCrawling();
@@ -34,10 +34,10 @@ use SoundDetective\Util\Log;
 //$crawler->resetArtistCalculation();
 
 
-$relationCalculator = new RelationCalculation();
+//$relationCalculator = new RelationCalculation();
 //$relationCalculator->calculateRelated(1955);
 
-$relationCalculator->insertCalculatedRelated();
+//$relationCalculator->insertCalculatedRelated();
 
 ?>
 <html>
@@ -45,7 +45,7 @@ $relationCalculator->insertCalculatedRelated();
         <title>Update Control - Sound Detective</title>
         <script type="text/javascript">
             window.setTimeout(function(){
-                  //window.location.href = window.location.href;
+                  window.location.href = window.location.href;
             }, 500);
         </script>
     </head>

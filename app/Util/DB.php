@@ -312,6 +312,7 @@ class DB
 
         $stmt->execute();
         $this->_stmtError = $stmt->error;
+
         $this->_lastQuery = $this->replacePlaceHolders ($this->_query, $params);
         $res = $this->_dynamicBindResults($stmt);
         $this->reset();

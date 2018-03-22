@@ -72,6 +72,7 @@ class SoundDetectiveDB extends DB{
         $query .= " (`" . join("`,`", $columnNames) . "`) VALUES " . join(",", $records);
 
         $this->log->write("INSERT IGNORE INTO " . $tableName);
+
         return $this->rawQuery($query);
     }
 

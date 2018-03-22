@@ -732,6 +732,7 @@ class SpotifyUpdateCrawler{
                 usleep(rand(1000,100000));
 
                 $mutexStream->lock();
+
                 $artists = $mutexStream->getData(self::amountTopSongsUpdate, false);
             }
             catch(MutexIsLockedException $e){
