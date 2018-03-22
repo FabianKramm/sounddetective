@@ -29,7 +29,7 @@ require(["jquery", "underscore", "handlebars", "backbone", "vex", "jquery.qtip.m
         smallImageNotFoundUrl: "img/SD.png",
         bigImageNotFoundUrl: "img/SD.png",
         backgroundImageNotFoundUrl: "img/SD.png",
-        recaptchaKey: "6LflPAwTAAAAABLxS6r0PF25cnS926C1WpbBGEa3",
+        recaptchaKey: "6LdJT04UAAAAAEqkE6y36nC3UrwWjnPq7LNZhZdA",
         currentTime: new Date().getTime(),
         loginMode: {
             normalLogin: 0,
