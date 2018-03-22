@@ -4,4 +4,4 @@ fabiantest/
 credentials.json
 app/Update/Config.php
 MySQL/
-/app/Update/Config.php
+app/Util/Config.php
