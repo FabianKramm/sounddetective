@@ -2,7 +2,7 @@
 namespace SoundDetective\Update;
 
 class Config{
-    const db_host = "";
+    const db_host = "127.0.0.1";
     const db_name = "sounddetective";
     const db_port = "3306";
     const db_user = "root";
