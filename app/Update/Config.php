@@ -1,16 +1,13 @@
 <?php
 namespace SoundDetective\Update;
-
 class Config{
     const db_host = "127.0.0.1";
     const db_name = "sounddetective";
     const db_port = "3306";
     const db_user = "root";
     const db_password = "";
-
     const spotify_token = "";
     const last_fm_key = "";
-
     const table_update_albums = "albums";
     const table_update_artists = "artists";
     const table_update_related = "artists_related";
