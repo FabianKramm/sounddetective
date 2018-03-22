@@ -18,7 +18,7 @@ class Config{
     const db_name = "sounddetective";
     const db_port = "3306";
     const db_user = "root";
-    const db_password = "";
+    const db_password = "abc";
 
     const email_host = "";
     const email_username = "";
