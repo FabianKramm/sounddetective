@@ -645,9 +645,9 @@ class SpotifyUpdateCrawler{
         // House
         $result = $this->db->ObjectBuilder()->rawQuery("SELECT s.song_id as id, MAX(s.current_popularity) as hotness FROM " . Config::table_update_tracks . " as s WHERE" .
             " s.release_date >= '" . $min_release_date .  "' AND " .
-            "(s.artist_id IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id IN ('486','4') AND difference <= 0.5) OR " .
-            "s.artist_id2 IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id IN ('486','4') AND difference <= 0.5) OR " .
-            "s.artist_id3 IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id IN ('486','4') AND difference <= 0.5)) ".
+            "(s.artist_id IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id IN ('470','442') AND difference <= 0.5) OR " .
+            "s.artist_id2 IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id IN ('470','442') AND difference <= 0.5) OR " .
+            "s.artist_id3 IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id IN ('470','442') AND difference <= 0.5)) ".
             "GROUP BY s.song_id ORDER BY hotness DESC LIMIT 30");
     
         $place = 0;
@@ -663,7 +663,7 @@ class SpotifyUpdateCrawler{
         // Rock
         $result = $this->db->ObjectBuilder()->rawQuery("SELECT s.song_id as id, MAX(s.current_popularity) as hotness FROM " . Config::table_update_tracks . " as s WHERE" .
             " s.release_date >= '" . $min_release_date .  "' AND " .
-            "s.artist_id IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id = 183 AND difference <= 0.5) AND (s.is_remix = '0' OR s.is_remix IS NULL)".
+            "s.artist_id IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id = 20854 AND difference <= 0.5) AND (s.is_remix = '0' OR s.is_remix IS NULL)".
             "GROUP BY s.song_id ORDER BY hotness DESC LIMIT 30");
     
         $place = 0;
@@ -679,7 +679,7 @@ class SpotifyUpdateCrawler{
         // Pop
         $result = $this->db->ObjectBuilder()->rawQuery("SELECT s.song_id as id, MAX(s.current_popularity) as hotness FROM " . Config::table_update_tracks . " as s WHERE" .
             " s.release_date >= '" . $min_release_date .  "' AND " .
-            "s.artist_id IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id = 18 AND difference <= 0.5) ".
+            "s.artist_id IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id = 376 AND difference <= 0.5) ".
             "GROUP BY s.song_id ORDER BY hotness DESC LIMIT 30");
     
         $place = 0;
@@ -695,7 +695,7 @@ class SpotifyUpdateCrawler{
         // Hip hop
         $result = $this->db->ObjectBuilder()->rawQuery("SELECT s.song_id as id, MAX(s.current_popularity) as hotness FROM " . Config::table_update_tracks . " as s WHERE" .
             " s.release_date >= '" . $min_release_date .  "' AND " .
-            "s.artist_id IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id = 53 AND difference <= 0.5) AND (s.is_remix = '0' OR s.is_remix IS NULL)".
+            "s.artist_id IN (SELECT to_id FROM " . Config::table_update_related_calculated . " WHERE from_id = 22 AND difference <= 0.5) AND (s.is_remix = '0' OR s.is_remix IS NULL)".
             "GROUP BY s.song_id ORDER BY hotness DESC LIMIT 30");
     
         $place = 0;

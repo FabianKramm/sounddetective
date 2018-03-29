@@ -2417,7 +2417,7 @@ require(["jquery", "underscore", "handlebars", "backbone", "vex", "jquery.qtip.m
         addEventsToDetectives: function(ele){
             ele.find(".detective").click(function(e){
                 // Check if temp detective
-                if( parseInt(GlobalCollections.detectives.toJSON()[e.currentTarget.dataset["id"]].owner_id) == -1337 ){
+                if( parseInt(GlobalCollections.detectives.toJSON()[e.currentTarget.dataset["id"]].owner_id) === -1337 ){
                     var tempDetectives = (localStorage.getItem("tempDetectives")) ? JSON.parse(localStorage.getItem("tempDetectives")) : [];
                     var idx = tempDetectives.map(function(el){
                         return el.uuid;
@@ -2438,7 +2438,7 @@ require(["jquery", "underscore", "handlebars", "backbone", "vex", "jquery.qtip.m
 
             ele.find(".detective-delete").click(function(e){
                 // Check if temp detective
-                if( parseInt(GlobalCollections.detectives.toJSON()[e.currentTarget.dataset["id"]].owner_id) == -1337 ){
+                if( parseInt(GlobalCollections.detectives.toJSON()[e.currentTarget.dataset["id"]].owner_id) === -1337 ){
                     var tempDetectives = (localStorage.getItem("tempDetectives")) ? JSON.parse(localStorage.getItem("tempDetectives")) : [];
                     var idx = tempDetectives.map(function(el){
                         return el.uuid;

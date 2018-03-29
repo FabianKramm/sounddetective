@@ -19,23 +19,21 @@ use SoundDetective\Util\Log;
 
 $crawler = new SpotifyUpdateCrawler();
 
-//$crawler->updateArtistsLastFMImages();
+$crawler->updateArtistsLastFMImages();
 //$crawler->updateCharts();
 
 //$crawler->discoverFromPlaylists();
 //$crawler->updateTracks();
 
-//$crawler->updateArtistsTopSongs(false);
-$crawler->updateRelatedArtists(false);
-
+//$crawler->updateArtistsTopSongs();
+//$crawler->updateRelatedArtists(false);
 
 //$crawler->resetArtistRelatedCrawling();
 //$crawler->resetSongCrawling();
 //$crawler->resetArtistCalculation();
 
-
 //$relationCalculator = new RelationCalculation();
-//$relationCalculator->calculateRelated(1955);
+//$relationCalculator->calculateRelated(3);
 
 //$relationCalculator->insertCalculatedRelated();
 
