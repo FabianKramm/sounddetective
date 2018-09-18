@@ -13,7 +13,7 @@ class Config{
     const facebook_access = "941196972630314|PDbz289AYN4FTTeFYWUjkolLL2g";
     const youtube_api_key = "AIzaSyCQkbNuUBP-Ddn5DlXuT6XomSbNK8u6R1Y";
 
-    const db_host = "127.0.0.1";
+    const db_host = "mysql";
     const db_name = "sounddetective";
     const db_port = "3306";
     const db_user = "root";

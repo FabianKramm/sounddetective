@@ -9,4 +9,7 @@ RUN curl -L -o /tmp/memcached.tar.gz "https://github.com/php-memcached-dev/php-m
     && tar -C /usr/src/php/ext/memcached -zxvf /tmp/memcached.tar.gz --strip 1 \
     && docker-php-ext-configure memcached \
     && docker-php-ext-install memcached \
-    && rm /tmp/memcached.tar.gz
+    && rm /tmp/memcached.tar.gz 
+
+ADD . /var/www/html/
+ADD ./config /usr/local/etc/php/

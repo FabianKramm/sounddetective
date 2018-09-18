@@ -1,0 +1,41 @@
+cluster:
+  useKubeConfig: true
+devSpace:
+  portForwarding:
+  - labelSelector:
+      release: devspace
+    portMappings:
+    - localPort: 3000
+      remotePort: 80
+    resourceType: pod
+  release:
+    name: devspace
+    namespace: default
+  sync:
+  - containerPath: /var/www/html
+    labelSelector:
+      release: devspace
+    localSubPath: ./
+    resourceType: pod
+    uploadExcludePaths:
+    - Dockerfile
+    - .devspace/
+    - chart/
+images:
+  default:
+    build:
+      engine:
+        docker:
+          enabled: true
+      latestTimestamp: "2018-09-18T15:19:32.591303401+02:00"
+    name: fabian1991/devspace
+    registry: default
+    tag: yjJoJZN
+registries:
+  default:
+    url: hub.docker.com
+services:
+  tiller:
+    release:
+      namespace: default
+version: v1
