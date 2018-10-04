@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sounddetective
+  labels:
+    app: sounddetective
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  type: NodePort
+  selector:
+    release: devspace

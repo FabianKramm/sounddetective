@@ -1,6 +1,7 @@
 cluster:
   useKubeConfig: true
 devSpace:
+  chartHash: 59b6b714559411cb85bbf25603829c8780c35e054271bed609f5fc4bf23b3a71
   portForwarding:
   - labelSelector:
       release: devspace
@@ -28,9 +29,9 @@ images:
         docker:
           enabled: true
       latestTimestamp: "2018-09-18T15:19:32.591303401+02:00"
-    name: fabian1991/devspace
+    name: fabian1991/sounddetective
     registry: default
-    tag: yjJoJZN
+    tag: r3Sa28i
 registries:
   default:
     url: hub.docker.com

@@ -30,6 +30,9 @@ spec:
       {{- range $containerName, $container := .Values.containers }}
       - name: {{ $containerName }}
         image: "{{ $container.image }}"
+        resources:
+          requests:
+            cpu: "10m"
         command:
         {{- range $index, $command := $container.command }}
         - "{{ $command }}"
